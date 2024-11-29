@@ -1,0 +1,43 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kazek.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="Kazek.Pages.GamePage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamePage">
+
+    <Grid>
+        <Image Source="/Pages/images.jpg" Margin="-10,-82,-60,-37" />
+
+        <ui:Button x:Name="SpinB" Content="Крутка" Margin="0,363,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Click="SpinBF">
+
+        </ui:Button>
+        <ui:TextBlock Background="Wheat" x:Name="Result" HorizontalAlignment="Center" Margin="0,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="89"/>
+        <TextBlock x:Name="reel1" FontSize="36" TextAlignment="Center" Margin="100,120,610,240" Width="90" Height="90" Background="{x:Null}"/>
+        <TextBlock x:Name="reel2" FontSize="36" TextAlignment="Center" Margin="345,110,365,250" Width="90" Height="90"/>
+        <TextBlock x:Name="reel3" FontSize="36" TextAlignment="Center" Margin="600,110,110,210" Width="90" Height="90"/>
+        <Image x:Name="slot1" Margin="100,120,610,205" Width="90" Stretch="Fill"/>
+        <Image x:Name="slot2" Margin="345,110,365,220" Width="90" Stretch="Fill"/>
+        <Image x:Name="slot3" Margin="600,110,110,209" Width="90" Stretch="Fill"/>
+
+        <ui:TextBlock HorizontalAlignment="Left" FontSize="25" Margin="502,352,0,0" TextWrapping="Wrap" Text="Баланс:" VerticalAlignment="Top" Height="36" Width="93" Foreground="White"/>
+        <ui:TextBlock HorizontalAlignment="Left" FontSize="25" Margin="502,306,0,0" TextWrapping="Wrap" Text="Ставка:" VerticalAlignment="Top" Height="36" Width="93" Foreground="White"/>
+        <ui:TextBox Background="Wheat" x:Name="UserBet" Text="0" HorizontalAlignment="Left" Margin="635,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="100" Foreground="Black" FontSize="25" RenderTransformOrigin="0.5,0.5"></ui:TextBox>
+        <ui:TextBlock Background="Wheat" x:Name="UserBalance" HorizontalAlignment="Left" Margin="635,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="150" Foreground="Black" FontSize="25" Loaded="UserBalance_Loaded" RenderTransformOrigin="0.5,0.5">
+            <ui:TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.178"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ui:TextBlock.RenderTransform>
+        </ui:TextBlock>
+        <Button Content="Выход" Margin="20,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.153,0.474" Click="Button_Click"/>
+        <Button Content="История" Margin="715,18,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+    </Grid>
+</Page>

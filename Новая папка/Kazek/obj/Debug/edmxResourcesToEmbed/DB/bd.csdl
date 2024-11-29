@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Kazino339Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bets">
+    <Key>
+      <PropertyRef Name="id_bets" />
+    </Key>
+    <Property Name="id_bets" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_session" Type="Int32" Nullable="false" />
+    <Property Name="id_game" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="result" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Game" Relationship="Self.FK_Bets_Game" FromRole="Bets" ToRole="Game" />
+    <NavigationProperty Name="Session" Relationship="Self.FK_Bets_Session" FromRole="Bets" ToRole="Session" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="id_game" />
+    </Key>
+    <Property Name="id_game" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="game_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bets" Relationship="Self.FK_Bets_Game" FromRole="Game" ToRole="Bets" />
+    <NavigationProperty Name="GameHistory" Relationship="Self.FK_GameHistory_Game" FromRole="Game" ToRole="GameHistory" />
+  </EntityType>
+  <EntityType Name="GameHistory">
+    <Key>
+      <PropertyRef Name="id_game_history" />
+    </Key>
+    <Property Name="id_game_history" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_game" Type="Int32" Nullable="false" />
+    <Property Name="result" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="played_time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Game" Relationship="Self.FK_GameHistory_Game" FromRole="GameHistory" ToRole="Game" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="id_session" />
+    </Key>
+    <Property Name="id_session" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="start_time" Type="DateTime" Precision="3" />
+    <Property Name="end_time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Bets" Relationship="Self.FK_Bets_Session" FromRole="Session" ToRole="Bets" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Session_User" FromRole="Session" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="id_transaction" />
+    </Key>
+    <Property Name="id_transaction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="transaction_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time_stamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Transactions_User" FromRole="Transactions" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date_create" Type="DateTime" Precision="0" />
+    <Property Name="value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Avatar" Type="Binary" MaxLength="50" FixedLength="true" />
+    <NavigationProperty Name="Session" Relationship="Self.FK_Session_User" FromRole="User" ToRole="Session" />
+    <NavigationProperty Name="Transactions" Relationship="Self.FK_Transactions_User" FromRole="User" ToRole="Transactions" />
+  </EntityType>
+  <Association Name="FK_Bets_Game">
+    <End Role="Game" Type="Self.Game" Multiplicity="1" />
+    <End Role="Bets" Type="Self.Bets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="id_game" />
+      </Principal>
+      <Dependent Role="Bets">
+        <PropertyRef Name="id_game" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bets_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="Bets" Type="Self.Bets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="id_session" />
+      </Principal>
+      <Dependent Role="Bets">
+        <PropertyRef Name="id_session" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GameHistory_Game">
+    <End Role="Game" Type="Self.Game" Multiplicity="1" />
+    <End Role="GameHistory" Type="Self.GameHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="id_game" />
+      </Principal>
+      <Dependent Role="GameHistory">
+        <PropertyRef Name="id_game" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Session_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Kazino339Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bets" EntityType="Self.Bets" />
+    <EntitySet Name="Game" EntityType="Self.Game" />
+    <EntitySet Name="GameHistory" EntityType="Self.GameHistory" />
+    <EntitySet Name="Session" EntityType="Self.Session" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Transactions" EntityType="Self.Transactions" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_Bets_Game" Association="Self.FK_Bets_Game">
+      <End Role="Game" EntitySet="Game" />
+      <End Role="Bets" EntitySet="Bets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bets_Session" Association="Self.FK_Bets_Session">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="Bets" EntitySet="Bets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GameHistory_Game" Association="Self.FK_GameHistory_Game">
+      <End Role="Game" EntitySet="Game" />
+      <End Role="GameHistory" EntitySet="GameHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Session_User" Association="Self.FK_Session_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Session" EntitySet="Session" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_User" Association="Self.FK_Transactions_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

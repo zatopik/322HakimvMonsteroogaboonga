@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ESHKEREModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bet">
+    <Key>
+      <PropertyRef Name="Bet_id" />
+    </Key>
+    <Property Name="Bet_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sesion_id" Type="int" />
+    <Property Name="BetAmount" Type="int" />
+    <Property Name="betResult" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="Game_id" />
+    </Key>
+    <Property Name="Game_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Game_name" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Pofile">
+    <Key>
+      <PropertyRef Name="Prof_id" />
+    </Key>
+    <Property Name="Prof_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="50" />
+    <Property Name="Login" Type="nchar" MaxLength="50" />
+    <Property Name="balance" Type="int" />
+    <Property Name="Role_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Role_ID" />
+    </Key>
+    <Property Name="Role_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role_Name" Type="nchar" MaxLength="10" />
+    <Property Name="Admin_password" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Sesion">
+    <Key>
+      <PropertyRef Name="Sesion_id" />
+    </Key>
+    <Property Name="Sesion_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Game_id" Type="int" />
+    <Property Name="Prof_id" Type="int" />
+    <Property Name="Sesion_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Transact_history">
+    <Key>
+      <PropertyRef Name="Trans_ID" />
+    </Key>
+    <Property Name="Trans_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Trans_date" Type="date" />
+    <Property Name="Prof_id" Type="int" />
+    <Property Name="Trans_Type" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Bet_Sesion">
+    <End Role="Sesion" Type="Self.Sesion" Multiplicity="0..1" />
+    <End Role="Bet" Type="Self.Bet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sesion">
+        <PropertyRef Name="Sesion_id" />
+      </Principal>
+      <Dependent Role="Bet">
+        <PropertyRef Name="Sesion_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pofile_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Pofile" Type="Self.Pofile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Role_ID" />
+      </Principal>
+      <Dependent Role="Pofile">
+        <PropertyRef Name="Role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sesion_Games">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Sesion" Type="Self.Sesion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="Game_id" />
+      </Principal>
+      <Dependent Role="Sesion">
+        <PropertyRef Name="Game_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sesion_Pofile">
+    <End Role="Pofile" Type="Self.Pofile" Multiplicity="0..1" />
+    <End Role="Sesion" Type="Self.Sesion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pofile">
+        <PropertyRef Name="Prof_id" />
+      </Principal>
+      <Dependent Role="Sesion">
+        <PropertyRef Name="Prof_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transact_history_Pofile">
+    <End Role="Pofile" Type="Self.Pofile" Multiplicity="0..1" />
+    <End Role="Transact_history" Type="Self.Transact_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pofile">
+        <PropertyRef Name="Prof_id" />
+      </Principal>
+      <Dependent Role="Transact_history">
+        <PropertyRef Name="Prof_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ESHKEREModelContainer">
+    <EntitySet Name="Bet" EntityType="Self.Bet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pofile" EntityType="Self.Pofile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sesion" EntityType="Self.Sesion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transact_history" EntityType="Self.Transact_history" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Bet_Sesion" Association="Self.FK_Bet_Sesion">
+      <End Role="Sesion" EntitySet="Sesion" />
+      <End Role="Bet" EntitySet="Bet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pofile_Role" Association="Self.FK_Pofile_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Pofile" EntitySet="Pofile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sesion_Games" Association="Self.FK_Sesion_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Sesion" EntitySet="Sesion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sesion_Pofile" Association="Self.FK_Sesion_Pofile">
+      <End Role="Pofile" EntitySet="Pofile" />
+      <End Role="Sesion" EntitySet="Sesion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transact_history_Pofile" Association="Self.FK_Transact_history_Pofile">
+      <End Role="Pofile" EntitySet="Pofile" />
+      <End Role="Transact_history" EntitySet="Transact_history" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

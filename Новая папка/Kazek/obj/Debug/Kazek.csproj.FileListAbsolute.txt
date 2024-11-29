@@ -1,0 +1,96 @@
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Kazek.exe.config
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Kazek.exe
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Kazek.pdb
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\EntityFramework.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\EntityFramework.xml
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.csproj.AssemblyReference.cache
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\MainWindow.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\App.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek_Content.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek_MarkupCompile.cache
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek_MarkupCompile.lref
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\MainWindow.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.g.resources
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.Properties.Resources.resources
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.csproj.GenerateResource.cache
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.csproj.CoreCompileInputs.cache
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.csproj.Up2Date
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.exe
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Kazek.pdb
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\LoginPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\LoginPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Wpf.Ui.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Wpf.Ui.pdb
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\Wpf.Ui.xml
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\App.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\MainPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\MainPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\ProfilePage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\ProfilePage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\EditPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\EditPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\RegPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\RegPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\BalancePage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\BalancePage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\GamePage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\GamePage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\bin\Debug\QRCoder.dll
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\HistoryPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\HistoryPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\KartPage.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\KartPage.baml
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\Vivid.g.cs
+C:\Users\lopno\source\repos\Kazek\Kazek\obj\Debug\Pages\Vivid.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Kazek.exe.config
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Kazek.exe
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Kazek.pdb
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\EntityFramework.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\QRCoder.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Wpf.Ui.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\EntityFramework.xml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Wpf.Ui.pdb
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\Wpf.Ui.xml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.csproj.AssemblyReference.cache
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\MainWindow.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\BalancePage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\EditPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\GamePage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\HistoryPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\KartPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\LoginPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\MainPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\ProfilePage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\RegPage.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\Vivid.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\App.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek_Content.g.cs
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek_MarkupCompile.cache
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek_MarkupCompile.lref
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\App.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\MainWindow.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\BalancePage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\EditPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\GamePage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\HistoryPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\KartPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\LoginPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\MainPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\ProfilePage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\RegPage.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Pages\Vivid.baml
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.g.resources
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.Properties.Resources.resources
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.csproj.GenerateResource.cache
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.csproj.CoreCompileInputs.cache
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.csproj.CopyComplete
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.exe
+C:\Users\Алмаз Хакимов\Desktop\Kazek\Kazek\obj\Debug\Kazek.pdb
